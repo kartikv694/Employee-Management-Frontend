@@ -1,11 +1,12 @@
+// Employee Details
+
+// Import Files
 import React, { useEffect, useState } from 'react'
 import axios from 'axios'
 import { useParams } from 'react-router-dom'
 import EmployeeSidebar from './EmployeeSidebar'
 import EmployeeNavbar from './EmployeeNavbar'
 import { useAuth } from '../../context/auth'
-
-
 
 
 export default function EmployeeProfile() {
@@ -16,7 +17,7 @@ export default function EmployeeProfile() {
    async function getEmployee()
     {
       try {
-        const {data} =  await axios.get(`http://localhost:8000/api/v2/employee/single/${_id}`,
+        const {data} =  await axios.get(`https://employee-management-backend-ten.vercel.app/api/v2/employee/single/${_id}`,
             {
                 headers:{
                     Authorization:`Bearer ${auth?.token}`
@@ -43,7 +44,7 @@ export default function EmployeeProfile() {
                        <h1 className='text-2xl font-bold mb-8 text-center' >Employee Details</h1>
                        <div className='grid grid-cols-1 md:grid-cols-2'>
                           <div>
-                              <img src={`http://localhost:8000/${emp?.userId?.profileImage}`} 
+                              <img src={`https://employee-management-backend-ten.vercel.app/${emp?.userId?.profileImage}`} 
                               alt="" className='rounded-full border w-40 p-2' />
                           </div>
                           <div>

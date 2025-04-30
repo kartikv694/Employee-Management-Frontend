@@ -1,3 +1,6 @@
+// Showing All Employee Leaves Page
+
+// Import Files
 import React, { useEffect, useState } from 'react'
 import EmployeeNavbar from './EmployeeNavbar'
 import EmployeeSidebar from './EmployeeSidebar'
@@ -10,7 +13,7 @@ export default function AllLeaves() {
     const [auth,setAuth] = useAuth()
         const getLeaves = async ()=>{
             try {
-                const {data} = await axios.get(`http://localhost:8000/api/v2/employee/leave/all-leaves/${auth?.user?.id}`,
+                const {data} = await axios.get(`https://employee-management-backend-ten.vercel.app/api/v2/employee/leave/all-leaves/${auth?.user?.id}`,
                     {
                         headers: {
                             Authorization: `Bearer${auth?.token}`

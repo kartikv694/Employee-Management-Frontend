@@ -1,3 +1,6 @@
+// This File is For Password Reset and User Settings
+
+// Import Files
 import AdminNavbar from "../AdminNavbar";
 import AdminSidebar from "../AdminSidebar";
 

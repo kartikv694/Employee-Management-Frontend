@@ -1,3 +1,6 @@
+// Employee Dashboard Component
+
+// Import Files
 import React from 'react'
 import { useAuth } from '../../context/auth'
 

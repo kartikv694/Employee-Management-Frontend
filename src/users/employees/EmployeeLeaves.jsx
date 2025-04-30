@@ -1,3 +1,6 @@
+// Leave Apply By Employee
+
+// Import Files
 import React, { useState } from 'react'
 import EmployeeNavbar from './EmployeeNavbar'
 import EmployeeSidebar from './EmployeeSidebar'
@@ -21,7 +24,7 @@ export default function EmployeeLeaves() {
     e.preventDefault()
     try {
       // api calling 
-      const {data} = await axios.post(`http://localhost:8000/api/v2/employee/leave/apply`,
+      const {data} = await axios.post(`https://employee-management-backend-ten.vercel.app/api/v2/employee/leave/apply`,
         leave,
         {
           headers:{

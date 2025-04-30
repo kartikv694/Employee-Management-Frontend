@@ -1,3 +1,6 @@
+// Department Functional Buttons
+
+// Import Files
 import axios from "axios"
 import { useNavigate } from "react-router-dom"
 import { useAuth } from "../context/auth"
@@ -29,7 +32,7 @@ export default columns
     const handleDelete = async (_id)=>{
         // console.log(_id)
         try {
-            const {data} =  await axios.delete(`http://localhost:8000/api/v2/department/delete/${_id}`,
+            const {data} =  await axios.delete(`https://employee-management-backend-ten.vercel.app/api/v2/department/delete/${_id}`,
             {
                 headers: 
                 {

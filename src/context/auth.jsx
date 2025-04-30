@@ -1,4 +1,6 @@
+// Context API (Globally Declared) 
 
+// Import Files
 import { createContext, useContext, useEffect, useState } from "react";
 
 const AuthContext = createContext();

@@ -1,4 +1,6 @@
+//This File is for Adding Employee Details
 
+// Import Files
 import { useEffect, useState } from "react";
 import AdminNavbar from "../AdminNavbar";
 import AdminSidebar from "../AdminSidebar";
@@ -37,7 +39,7 @@ export default function AddEmployee() {
         // console.log(formData)
 
         try {
-            const {data} = await axios.post(`http://localhost:8000/api/v2/employee/add`,
+            const {data} = await axios.post(`https://employee-management-backend-ten.vercel.app/api/v2/employee/add`,
                     formDataObj,
                 {
                     headers: {
@@ -53,7 +55,7 @@ export default function AddEmployee() {
 
     const getDepartments = async ()=>{
         try {
-            const {data} = await axios.get(`http://localhost:8000/api/v2/department/all`,{
+            const {data} = await axios.get(`https://employee-management-backend-ten.vercel.app/api/v2/department/all`,{
                 headers:{
                     Authorization: `Bearer ${auth?.token}`
                 }

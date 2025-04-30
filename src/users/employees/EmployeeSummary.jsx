@@ -1,3 +1,6 @@
+// Employee Component Details
+
+// Import Files
 import React from 'react'
 import {FaBuilding, FaCheckCircle, FaFileAlt, FaHourglassHalf, FaMoneyBillWave, FaTimesCircle, FaUsers} from "react-icons/fa"
 import EmployeeSummaryCard from './EmployeeSummaryCard'

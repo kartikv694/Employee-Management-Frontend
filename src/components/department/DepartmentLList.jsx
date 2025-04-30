@@ -1,3 +1,6 @@
+// This File is for Managing All Departments
+
+// Import Files
 import React, { useEffect, useState } from 'react'
 import { NavLink} from 'react-router-dom'
 import AdminSidebar from '../AdminSidebar'
@@ -35,7 +38,7 @@ export default function DepartmentList() {
         const getDepartments = async ()=>{
             setLoading(true)
             try {
-                const {data} = await axios.get(`http://localhost:8000/api/v2/department/all`,{
+                const {data} = await axios.get(`https://employee-management-backend-ten.vercel.app/api/v2/department/all`,{
                     headers:{
                         Authorization: `Bearer ${auth?.token}`
                     }

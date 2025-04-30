@@ -1,3 +1,6 @@
+// Employee Settings Page
+
+// Import Files
 import React from 'react'
 import EmployeeNavbar from './EmployeeNavbar'
 import EmployeeSidebar from './EmployeeSidebar'

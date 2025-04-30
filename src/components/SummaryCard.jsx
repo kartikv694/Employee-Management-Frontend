@@ -1,3 +1,6 @@
+// Admin Dashboard Components  
+
+// Import Files
 import React from 'react'
 
 function SummaryCard({icon,text,number,color}) {
