@@ -13,7 +13,7 @@ export default function AllLeaves() {
     const [auth,setAuth] = useAuth()
         const getLeaves = async ()=>{
             try {
-                const {data} = await axios.get(`http://localhost:8000/api/v2/employee/leave/all-leaves/${auth?.user?.id}`,
+                const {data} = await axios.get(`https://employee-management-backend-blond.vercel.app/api/v2/employee/leave/all-leaves/${auth?.user?.id}`,
                     {
                         headers: {
                             Authorization: `Bearer${auth?.token}`

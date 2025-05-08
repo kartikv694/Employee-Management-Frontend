@@ -14,7 +14,7 @@ function AllSalary() {
 
     const getSalaries = async ()=>{
         try {
-            const {data} = await axios.get(`http://localhost:8000/api/v2/employee/salary/view`)
+            const {data} = await axios.get(`https://employee-management-backend-blond.vercel.app/api/v2/employee/salary/view`)
             console.log(data)
             if (data?.success) {
                 setEmpSalaries(data.salary)

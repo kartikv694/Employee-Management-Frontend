@@ -15,7 +15,7 @@ export default function LeaveDetails() {
 
     const changeStatus = async (id,status) => {
         try {
-            const {data} = await axios.put(`http://localhost:8000/api/v2/employee/leave/status/${id}`,
+            const {data} = await axios.put(`https://employee-management-backend-blond.vercel.app/api/v2/employee/leave/status/${id}`,
                 {status},
             {
                 headers:{
@@ -31,7 +31,7 @@ export default function LeaveDetails() {
 
     const Detail = async ()=>{
         try {
-            const {data} = await axios.get(`http://localhost:8000/api/v2/employee/leave/details/${_id}`,
+            const {data} = await axios.get(`https://employee-management-backend-blond.vercel.app/api/v2/employee/leave/details/${_id}`,
                 {
                     headers:{
                         Authorization: `Bearer ${auth?.token}`
