@@ -38,7 +38,7 @@ export default function DepartmentList() {
         const getDepartments = async ()=>{
             setLoading(true)
             try {
-                const {data} = await axios.get(`https://employee-management-backend-blond.vercel.app/api/v2/department/all`,{
+                const {data} = await axios.get(`https://employee-management-backend-ime7.onrender.com/api/v2/department/all`,{
                     headers:{
                         Authorization: `Bearer ${auth?.token}`
                     }

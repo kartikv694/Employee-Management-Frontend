@@ -32,7 +32,7 @@ export default columns
     const handleDelete = async (_id)=>{
         // console.log(_id)
         try {
-            const {data} =  await axios.delete(`https://employee-management-backend-blond.vercel.app/api/v2/department/delete/${_id}`,
+            const {data} =  await axios.delete(`https://employee-management-backend-ime7.onrender.com/api/v2/department/delete/${_id}`,
             {
                 headers: 
                 {

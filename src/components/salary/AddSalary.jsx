@@ -25,7 +25,7 @@ export default function AddSalary() {
         const _id = e.target.value
         const getEmployeeByDept = async () => {
             try {
-                const { data } = await axios.get(`https://employee-management-backend-blond.vercel.app/api/v2/employee/department/${_id}`, {
+                const { data } = await axios.get(`https://employee-management-backend-ime7.onrender.com/api/v2/employee/department/${_id}`, {
                     headers: {
                         Authorization: `Bearer ${auth?.token}`
                     }
@@ -46,7 +46,7 @@ export default function AddSalary() {
         setEmpUser({ ...empUser, [e.target.name]: e.target.value })
         if (e.target.name == "employeeId") {
             let _id = e.target.value
-            const { data } = await axios.get(`https://employee-management-backend-blond.vercel.app/api/v2/employee/singlesalary/${empUser?.employeeId || _id}`)
+            const { data } = await axios.get(`https://employee-management-backend-ime7.onrender.com/api/v2/employee/singlesalary/${empUser?.employeeId || _id}`)
             console.log(data?.employee)
             setEmpUser({
                 ...empUser,
@@ -64,7 +64,7 @@ export default function AddSalary() {
         e.preventDefault()
         console.log(empUser)
         try {
-            const { data } = await axios.post(`https://employee-management-backend-blond.vercel.app/api/v2/employee/salary/add`,
+            const { data } = await axios.post(`https://employee-management-backend-ime7.onrender.com/api/v2/employee/salary/add`,
                 empUser,
                 {
                     headers: {
@@ -85,7 +85,7 @@ export default function AddSalary() {
     // getDepartments
     const getDepartments = async () => {
         try {
-            const { data } = await axios.get(`https://employee-management-backend-blond.vercel.app/api/v2/department/all`, {
+            const { data } = await axios.get(`https://employee-management-backend-ime7.onrender.com/api/v2/department/all`, {
                 headers: {
                     Authorization: `Bearer ${auth?.token}`
                 }

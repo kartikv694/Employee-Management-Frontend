@@ -24,7 +24,7 @@ export default function EmployeeLeaves() {
     e.preventDefault()
     try {
       // api calling 
-      const {data} = await axios.post(`https://employee-management-backend-blond.vercel.app/api/v2/employee/leave/apply`,
+      const {data} = await axios.post(`https://employee-management-backend-ime7.onrender.com/api/v2/employee/leave/apply`,
         leave,
         {
           headers:{

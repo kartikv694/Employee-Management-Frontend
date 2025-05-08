@@ -23,7 +23,7 @@ export default function AddDepartment() {
   const handleSubmit = async (e)=>{
     e.preventDefault()
     try {
-      const {data} = await axios.post(`https://employee-management-backend-blond.vercel.app/api/v2/department/add`,
+      const {data} = await axios.post(`https://employee-management-backend-ime7.onrender.com/api/v2/department/add`,
         department,
         {headers:{
           Authorization: `Bearer ${auth?.token}`

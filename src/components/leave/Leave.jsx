@@ -25,7 +25,7 @@ export default function Leave() {
     
     const fetchLeaves  = async () => {
         try {
-            const {data} = await axios.get(`https://employee-management-backend-blond.vercel.app/api/v2/employee/leave/emp-leaves`,{
+            const {data} = await axios.get(`https://employee-management-backend-ime7.onrender.com/api/v2/employee/leave/emp-leaves`,{
                 headers:{
                     Authorization: `Bearer ${auth?.token}`
                 }
