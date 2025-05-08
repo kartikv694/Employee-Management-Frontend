@@ -19,7 +19,7 @@ export default function EditDepartment() {
     useEffect(()=>{
         const getDepartment = async ()=>{
             try {
-                const {data} = await axios.get(`https://employee-management-backend-ten.vercel.app/api/v2/department/get/${_id}`,{
+                const {data} = await axios.get(`http://localhost:8000/api/v2/department/get/${_id}`,{
                     headers: {
                         Authorization: `Bearer ${auth?.token}`
                     }
@@ -41,7 +41,7 @@ export default function EditDepartment() {
     const hanldeSubmit = async (e) => {
         e.preventDefault()
         try {
-            const {data} =  await axios.put(`https://employee-management-backend-ten.vercel.app/api/v2/department/update/${_id}`,
+            const {data} =  await axios.put(`http://localhost:8000/api/v2/department/update/${_id}`,
             {
                     dept_name: department?.dept_name,
                     description: department?.description

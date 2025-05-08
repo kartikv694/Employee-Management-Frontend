@@ -16,7 +16,7 @@ function ViewSalary() {
 
     const getSalary = async ()=>{
         try {
-          const {data} = await axios.get(`https://employee-management-backend-ten.vercel.app/api/v2/employee/salary/salary/${_id}`,
+          const {data} = await axios.get(`http://localhost:8000/api/v2/employee/salary/salary/${_id}`,
             {
                 headers: {
                     Authorization: `Bearer${auth?.token}`

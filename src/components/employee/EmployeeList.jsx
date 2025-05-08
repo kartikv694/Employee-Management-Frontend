@@ -28,7 +28,7 @@ export default function EmployeeList() {
             // console.log("ok")
             setLoading(true)
             try {
-                const {data} = await axios.get(`https://employee-management-backend-ten.vercel.app/api/v2/employee/all`,{
+                const {data} = await axios.get(`http://localhost:8000/api/v2/employee/all`,{
                     headers:{
                         Authorization: `Bearer ${auth?.token}`
                     }
@@ -44,7 +44,7 @@ export default function EmployeeList() {
                         dept_name:emp?.department?.dept_name,
                         name:emp?.userId?.name,
                         dob: new Date(emp?.dob).toLocaleDateString(),
-                        profileImage: <img src={`https://employee-management-backend-ten.vercel.app/${emp?.userId?.profileImage}`}
+                        profileImage: <img src={`http://localhost:8000/${emp?.userId?.profileImage}`}
                         width={'100px'}/>,
                         action: <EmployeesButtons _id={emp?._id} />
 

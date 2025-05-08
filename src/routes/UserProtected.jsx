@@ -12,7 +12,7 @@ export default function UserProtected() {
   const [auth,setAuth] = useAuth()
   useEffect(()=>{
     async function authCheck() {
-         const {data} =  await axios.get(`https://employee-management-backend-ten.vercel.app/api/v2/emp/user-protected`,{
+         const {data} =  await axios.get(`http://localhost:8000/api/v2/emp/user-protected`,{
         headers: {
           Authorization:`Bearer ${auth?.token}`
         }

@@ -25,7 +25,7 @@ export default function Edit() {
 
     async function getEmployee() {
         try {
-            const { data } = await axios.get(`https://employee-management-backend-ten.vercel.app/api/v2/employee/single/${_id}`,
+            const { data } = await axios.get(`http://localhost:8000/api/v2/employee/single/${_id}`,
                 {
                     headers: {
                         Authorization: `Bearer ${auth?.token}`
@@ -64,7 +64,7 @@ export default function Edit() {
         e.preventDefault();
         // console.log(semp)
         try {
-            const { data } = await axios.put(`https://employee-management-backend-ten.vercel.app/api/v2/employee/update/${_id}`,
+            const { data } = await axios.put(`http://localhost:8000/api/v2/employee/update/${_id}`,
                 emp,
                 {
                     headers: {
@@ -85,7 +85,7 @@ export default function Edit() {
     // getDepartments
     const getDepartments = async () => {
         try {
-            const { data } = await axios.get(`https://employee-management-backend-ten.vercel.app/api/v2/department/all`, {
+            const { data } = await axios.get(`http://localhost:8000/api/v2/department/all`, {
                 headers: {
                     Authorization: `Bearer ${auth?.token}`
                 }
