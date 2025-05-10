@@ -12,7 +12,7 @@ export default function AdminProtected() {
   const [auth,setAuth] = useAuth()
   useEffect(()=>{
     async function authCheck() {
-         const {data} =  await axios.get(`https://employee-management-backend-ime7.onrender.com/api/v2/emp/admin-protected`,{
+         const {data} =  await axios.get(`http://localhost:8000/api/v2/emp/admin-protected`,{
         headers: {
           Authorization:`Bearer ${auth?.token}`
         }

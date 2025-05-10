@@ -15,7 +15,7 @@ export default function EmployeeSettings() {
       e.preventDefault()
       // console.log(email, newPassword)
       try {
-          const res = await axios.post(`https://employee-management-backend-ime7.onrender.com/api/v2/emp/reset-password`,
+          const res = await axios.post(`http://localhost:8000/api/v2/emp/reset-password`,
               { email: email, password: newPassword }
           )
           console.log(res)

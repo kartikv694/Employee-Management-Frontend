@@ -15,7 +15,7 @@ export default function Login() {
   const handleLogin = async (e) => {
     e.preventDefault()
     try {
-      const res = await axios.post(`https://employee-management-backend-ime7.onrender.com/api/v2/emp/login`, {
+      const res = await axios.post(`http://localhost:8000/api/v2/emp/login`, {
         email, password
       }
       )
